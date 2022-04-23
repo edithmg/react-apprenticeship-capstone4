@@ -5,7 +5,11 @@ import Loading from '../Loading';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { StyledBanners, SwiperImg } from './FeaturedContent.styles';
+import {
+  StyledBanners,
+  SwiperImg,
+  SwiperLabel,
+} from './FeaturedContent.styles';
 
 const FeaturedContent = () => {
   const { data: bannersData, isLoading } = useFeaturedBanners();
@@ -29,10 +33,10 @@ const FeaturedContent = () => {
       >
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <SwiperImg
-              src={banner.data.main_image.url}
-              alt={banner.data.title}
-            />
+            <SwiperImg>
+              <img src={banner.data.main_image.url} alt={banner.data.title} />
+              <SwiperLabel>{banner.data.title}</SwiperLabel>
+            </SwiperImg>
           </SwiperSlide>
         ))}
       </Swiper>

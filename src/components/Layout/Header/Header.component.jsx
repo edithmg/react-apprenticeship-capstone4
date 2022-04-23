@@ -11,6 +11,7 @@ import {
   Menu,
   MenuItem,
   MenuLink,
+  HashLink,
 } from './Header.styles';
 
 const Header = () => {
@@ -37,9 +38,9 @@ const Header = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink onClick={closeMenu} to="#newcollection">
+              <HashLink onClick={closeMenu} smooth to={'/#newcollection'}>
                 New collection
-              </MenuLink>
+              </HashLink>
             </MenuItem>
             <MenuItem>
               <MenuLink onClick={closeMenu} to="/">

@@ -76,12 +76,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
   font-size: 3.5rem;
+  @media all and (max-width: 480px) {
+    font-size: 2.7rem
+  }
 }
 h2 {
   font-size: 3rem;
+  @media all and (max-width: 480px) {
+    font-size: 2.5rem
+  }
 }
 h3 {
   font-size: 2.5rem;
+  @media all and (max-width: 480px) {
+    font-size: 2rem
+  }
 }
 h4 {
   font-size: 1.8rem;
